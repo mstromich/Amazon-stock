@@ -14,7 +14,10 @@ def amazonstock():
         price_float = float(json.loads(r.text))
         return price_float
     except requests.ConnectionError:
-        print("Error querying Bitstamp API")
+        print("Error querying IEXTrading API. Retrying...")
+        price_float = 0
+        return price_float
+
 
 while True:
     print(datetime.datetime.now())
