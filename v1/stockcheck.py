@@ -19,6 +19,7 @@ def amazonstock():
         return price_float
 
 
+
 while True:
     print(datetime.datetime.now())
     print("Amazon stock is currently valued at: USD " + str(round(amazonstock(),2)))
